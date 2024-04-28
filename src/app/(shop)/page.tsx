@@ -1,10 +1,17 @@
-import { titleFont } from "@/config/fonts";
+import { CategoryOptionsSlideshow, Title } from "@/components";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div className="">
-      <h1>Hola Mundo 1</h1>
-      <h1 className={ titleFont.className }>Hola Mundo 2</h1>
-    </div>
+    <>
+
+      <CategoryOptionsSlideshow />
+
+      <Title
+        title="Tienda"
+        subtitle="Todos los productos"
+        className="px-1 mb-2"
+      />
+
+    </>
   );
 }

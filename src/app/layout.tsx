@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { inter } from '@/config/fonts';
-
+import { inter } from "@/config/fonts";
 import "./globals.css";
 
 
 
 export const metadata: Metadata = {
-  title: "Tondra | Shop",
-  description: "Aplicación ecommerce tipo tienda virtual",
+  title: {
+    template: "%s - Tondra | Shop", //El %s es un comodín
+    default: "Home - Tondra | Shop" //Para que aparezca default en toda la APP
+  },
+  description: "Tienda virtual de productos",
 };
 
 export default function RootLayout({
