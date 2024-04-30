@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { IoManOutline, IoWomanOutline } from "react-icons/io5";
+import { LiaBoxOpenSolid } from "react-icons/lia";
+import { MdOutlineChildCare } from "react-icons/md";
 
 export const CategoryOptionsSlideshow = () => {
 
@@ -43,25 +46,37 @@ export const CategoryOptionsSlideshow = () => {
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   href="/gender/men"
               >
-                  Hombres
+                  <div className="flex">
+                    <IoManOutline size={20} /> 
+                    <span className="ml-10">Hombres</span>
+                  </div>
               </Link>
               <Link
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   href="/gender/women"
               >
-                  Mujeres
+                  <div className="flex">
+                    <IoWomanOutline size={20} />
+                    <span className="ml-10">Mujeres</span>
+                  </div>
               </Link>
               <Link
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   href="/gender/kid"
               >
-                  Niños
+                  <div className="flex">
+                    <MdOutlineChildCare size={20} />
+                    <span className="ml-10">Niños</span>
+                  </div>
               </Link>
               <Link
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   href="/gender/unisex"
               >
-                  Mixto
+                  <div className="flex">
+                    <LiaBoxOpenSolid size={20} />
+                    <span className="ml-10">Mixto</span>
+                  </div>
               </Link>
 
               

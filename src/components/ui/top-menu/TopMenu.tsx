@@ -1,14 +1,16 @@
 "use client";
 
 import { titleFont } from "@/config/fonts"
-// import { useUiStore } from "@/store/ui/ui-store";
+import { useUiStore } from "@/store/ui/ui-store";
 import Link from "next/link"
-import { IoCartOutline, IoSearchOutline } from "react-icons/io5"
+import { IoCartOutline, IoManOutline, IoSearchOutline, IoWomanOutline } from "react-icons/io5"
+import { LiaBoxOpenSolid } from "react-icons/lia";
+import { MdOutlineChildCare } from "react-icons/md";
 
 
 export const TopMenu = () => {
 
-//   const openMenu = useUiStore( state => state.openSideMenu );
+  const openMenu = useUiStore( state => state.openSideMenu );
 
   return (
     <nav className="flex px-5 justify-between items-center w-full">
@@ -23,10 +25,27 @@ export const TopMenu = () => {
 
       {/* Menu Central */}
       <div className="hidden sm:block">
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/men">Hombres</Link>
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/women">Mujeres</Link>
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/kid">Niños</Link>
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/unisex">Mixto</Link>
+        
+        <div className="flex">
+
+          <Link className="flex m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/men">
+            <IoManOutline className="mt-1" /> Hombres
+          </Link>
+
+          <Link className="flex m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/women">
+            <IoWomanOutline className="mt-1" />Mujeres
+          </Link>
+
+          <Link className="flex m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/kid">
+            <MdOutlineChildCare className="mt-1" />Niños
+          </Link>
+
+          <Link className="flex m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/unisex">
+            <LiaBoxOpenSolid className="mt-1" />Mixto
+          </Link>
+
+        </div>
+        
       </div>
 
       {/* Buscador, Card y Menu */}
@@ -47,7 +66,7 @@ export const TopMenu = () => {
         </Link>
 
         <button 
-        //   onClick={ () => openMenu() }
+          onClick={ () => openMenu() }
           className="m-2 p-2 rounded-md transition-all hover:bg-gray-100">
           Menú
         </button>
