@@ -11,4 +11,5 @@ export * from './product/slideshow/ProductSlideshow';
 export * from './product/slideshow/ProductMobileSlideshow';
 export * from './product/stock-price-label/StockPriceLabel';
 export * from './product/size-selector/SizeSelector';
+export * from './product/color-selector/ColorSelector';
 export * from './product/quantity-selector/QuantitySelector';

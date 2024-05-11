@@ -1,13 +1,13 @@
 import { CategoryOptionsSlideshow, Title } from "@/components";
 import { ProductGrid } from "@/components/products/product-grid/ProductGrid";
-import { IProduct } from "@/interfaces/product.interface";
+import { ValidGender } from "@/interfaces/product.interface";
 import { initialData } from "@/seed/seed";
 import { Metadata, ResolvingMetadata } from "next";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 interface IProps {
   params: {
-    gender: string, //Category
+    gender: ValidGender, //Category
   },
   searchParams: {
     page?: string;

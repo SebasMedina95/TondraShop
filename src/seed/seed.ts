@@ -4,6 +4,7 @@ interface SeedProduct {
     inStock: number;
     price: number;
     sizes: ValidSizes[];
+    colors: ValidColors[];
     slug: string;
     tags: string[];
     title: string;
@@ -14,12 +15,14 @@ interface SeedProduct {
 type ValidSizes = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
 type ValidTypes = 'shirts'|'pants'|'hoodies'|'hats';
 
+interface ValidColors {
+    name: string;
+    code: string;
+}
+
 interface SeedData {
     products: SeedProduct[],
 }
-
-
-
 
 export const initialData: SeedData = {
     products: [
@@ -32,6 +35,16 @@ export const initialData: SeedData = {
             inStock: 7,
             price: 75,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Beige",
+                    code: "#F5F7CA"
+                }
+            ],
             slug: "mens_chill_crew_neck_sweatshirt",
             type: 'shirts',
             tags: ['sweatshirt'],
@@ -47,6 +60,16 @@ export const initialData: SeedData = {
             inStock: 5,
             price: 200,
             sizes: ['XS','S','M','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                }
+            ],
             slug: "men_quilted_shirt_jacket",
             type: 'shirts',
             tags: ['jacket'],
@@ -63,6 +86,12 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 130,
             sizes: ['S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                }
+            ],
             slug: "men_raven_lightweight_zip_up_bomber_jacket",
             type: 'shirts',
             tags: ['shirt'],
@@ -79,6 +108,20 @@ export const initialData: SeedData = {
             inStock: 50,
             price: 45,
             sizes: ['XS','S','M','L'],
+            colors: [
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Naranja",
+                    code: "#FCB548"
+                },
+                {
+                    name: "Verde",
+                    code: "#2C9F44"
+                }
+            ],
             slug: "men_turbine_long_sleeve_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -94,6 +137,16 @@ export const initialData: SeedData = {
             inStock: 50,
             price: 40,
             sizes: ['M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                }
+            ],
             slug: "men_turbine_short_sleeve_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -109,6 +162,20 @@ export const initialData: SeedData = {
             inStock: 0,
             price: 35,
             sizes: ['M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                }
+            ],
             slug: "men_cybertruck_owl_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -124,6 +191,20 @@ export const initialData: SeedData = {
             inStock: 15,
             price: 35,
             sizes: ['S','M','L','XL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+            ],
             slug: "men_solar_roof_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -139,6 +220,16 @@ export const initialData: SeedData = {
             inStock: 17,
             price: 35,
             sizes: ['XS','S','XL','XXL'],
+            colors: [
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+            ],
             slug: "men_let_the_sun_shine_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -154,6 +245,28 @@ export const initialData: SeedData = {
             inStock: 12,
             price: 35,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+                {
+                    name: "Lima",
+                    code: "#25FD28"
+                }
+            ],
             slug: "men_3d_large_wordmark_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -169,6 +282,16 @@ export const initialData: SeedData = {
             inStock: 5,
             price: 35,
             sizes: ['XS','S'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                }
+            ],
             slug: "men_3d_t_logo_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -184,6 +307,16 @@ export const initialData: SeedData = {
             inStock: 2,
             price: 35,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                }
+            ],
             slug: "men_3d_small_wordmark_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -199,6 +332,28 @@ export const initialData: SeedData = {
             inStock: 82,
             price: 35,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+                {
+                    name: "Lima",
+                    code: "#25FD28"
+                }
+            ],
             slug: "men_plaid_mode_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -214,6 +369,20 @@ export const initialData: SeedData = {
             inStock: 24,
             price: 35,
             sizes: ['XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "men_powerwall_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -229,6 +398,20 @@ export const initialData: SeedData = {
             inStock: 5,
             price: 30,
             sizes: ['XS','S','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "men_battery_day_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -244,6 +427,16 @@ export const initialData: SeedData = {
             inStock: 150,
             price: 30,
             sizes: ['M','L'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "men_cybertruck_bulletproof_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -259,6 +452,24 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 35,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                }
+            ],
             slug: "men_haha_yes_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -274,6 +485,16 @@ export const initialData: SeedData = {
             inStock: 34,
             price: 35,
             sizes: ['XS','S','M','L'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "men_s3xy_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -289,6 +510,24 @@ export const initialData: SeedData = {
             inStock: 15,
             price: 40,
             sizes: ['XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "men_3d_wordmark_long_sleeve_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -304,6 +543,16 @@ export const initialData: SeedData = {
             inStock: 12,
             price: 40,
             sizes: ['XS','XXL'],
+            colors: [
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "men_3d_t_logo_long_sleeve_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -319,6 +568,20 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 115,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "men_raven_lightweight_hoodie",
             type: 'hoodies',
             tags: ['hoodie'],
@@ -334,6 +597,20 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 130,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "chill_pullover_hoodie",
             type: 'hoodies',
             tags: ['hoodie'],
@@ -349,6 +626,20 @@ export const initialData: SeedData = {
             inStock: 100,
             price: 85,
             sizes: ['XS','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "men_chill_full_zip_hoodie",
             type: 'shirts',
             tags: ['shirt'],
@@ -364,6 +655,24 @@ export const initialData: SeedData = {
             inStock: 7,
             price: 85,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+            ],
             slug: "men_chill_quarter_zip_pullover_-_gray",
             type: 'shirts',
             tags: ['shirt'],
@@ -379,6 +688,20 @@ export const initialData: SeedData = {
             inStock: 15,
             price: 85,
             sizes: ['XS','S','M','L'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+            ],
             slug: "men_chill_quarter_zip_pullover_-_white",
             type: 'shirts',
             tags: ['shirt'],
@@ -394,6 +717,16 @@ export const initialData: SeedData = {
             inStock: 15,
             price: 70,
             sizes: ['XS','S','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "3d_large_wordmark_pullover_hoodie",
             type: 'hoodies',
             tags: ['hoodie'],
@@ -409,6 +742,16 @@ export const initialData: SeedData = {
             inStock: 13,
             price: 60,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+            ],
             slug: "cybertruck_graffiti_hoodie",
             type: 'hoodies',
             tags: ['hoodie'],
@@ -424,6 +767,20 @@ export const initialData: SeedData = {
             inStock: 11,
             price: 30,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Beige",
+                    code: "bg-yellow-100"
+                }
+            ],
             slug: "relaxed_t_logo_hat",
             type: 'hats',
             tags: ['hats'],
@@ -439,6 +796,20 @@ export const initialData: SeedData = {
             inStock: 13,
             price: 35,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Beige",
+                    code: "bg-yellow-100"
+                }
+            ],
             slug: "thermal_cuffed_beanie",
             type: 'hats',
             tags: ['hats'],
@@ -454,6 +825,16 @@ export const initialData: SeedData = {
             inStock: 85,
             price: 225,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Beige",
+                    code: "bg-yellow-100"
+                }
+            ],
             slug: "women_cropped_puffer_jacket",
             type: 'hoodies',
             tags: ['hoodie'],
@@ -469,6 +850,20 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 130,
             sizes: ['XS','S','M','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Beige",
+                    code: "bg-yellow-100"
+                }
+            ],
             slug: "women_chill_half_zip_cropped_hoodie",
             type: 'hoodies',
             tags: ['hoodie'],
@@ -484,6 +879,24 @@ export const initialData: SeedData = {
             inStock: 9,
             price: 110,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Beige",
+                    code: "bg-yellow-100"
+                }
+            ],
             slug: "women_raven_slouchy_crew_sweatshirt",
             type: 'hoodies',
             tags: ['hoodie'],
@@ -499,6 +912,20 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 45,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Beige",
+                    code: "bg-yellow-100"
+                }
+            ],
             slug: "women_turbine_cropped_long_sleeve_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -514,6 +941,16 @@ export const initialData: SeedData = {
             inStock: 0,
             price: 40,
             sizes: ['XS','S'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                }
+            ],
             slug: "women_turbine_cropped_short_sleeve_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -529,6 +966,16 @@ export const initialData: SeedData = {
             inStock: 30,
             price: 35,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                }
+            ],
             slug: "women_t_logo_short_sleeve_scoop_neck_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -544,6 +991,20 @@ export const initialData: SeedData = {
             inStock: 16,
             price: 40,
             sizes: ['XS','S','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                }
+            ],
             slug: "women_t_logo_long_sleeve_scoop_neck_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -559,6 +1020,20 @@ export const initialData: SeedData = {
             inStock: 18,
             price: 35,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                }
+            ],
             slug: "women_small_wordmark_short_sleeve_v-neck_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -574,6 +1049,28 @@ export const initialData: SeedData = {
             inStock: 5,
             price: 35,
             sizes: ['XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+                {
+                    name: "Lima",
+                    code: "#25FD28"
+                }
+            ],
             slug: "women_large_wordmark_short_sleeve_crew_neck_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -589,6 +1086,28 @@ export const initialData: SeedData = {
             inStock: 16,
             price: 35,
             sizes: ['S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+                {
+                    name: "Lima",
+                    code: "#25FD28"
+                }
+            ],
             slug: "women_plaid_mode_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -604,9 +1123,27 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 130,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                },
+                {
+                    name: "Lima",
+                    code: "#25FD28"
+                }
+            ],
             slug: "women_powerwall_tee",
             type: 'shirts',
-            tags: ['shirt'],
+            tags: ['shirt','confort'],
             title: "Women’s Powerwall Tee",
             gender: 'women'
         },
@@ -619,6 +1156,20 @@ export const initialData: SeedData = {
             inStock: 3,
             price: 90,
             sizes: ['M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                }
+            ],
             slug: "women_corp_jacket",
             type: 'shirts',
             tags: ['shirt'],
@@ -634,6 +1185,20 @@ export const initialData: SeedData = {
             inStock: 162,
             price: 100,
             sizes: ['XS','S','M','L','XL','XXL'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                }
+            ],
             slug: "women_raven_joggers",
             type: 'shirts',
             tags: ['shirt'],
@@ -649,6 +1214,20 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 30,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                }
+            ],
             slug: "kids_cybertruck_long_sleeve_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -664,6 +1243,20 @@ export const initialData: SeedData = {
             inStock: 0,
             price: 25,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                }
+            ],
             slug: "kids_scribble_t_logo_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -679,6 +1272,20 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 25,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                }
+            ],
             slug: "kids_cybertruck_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -694,6 +1301,16 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 30,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                }
+            ],
             slug: "kids_racing_stripe_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -709,6 +1326,20 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 30,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                }
+            ],
             slug: "kids_3d_t_logo_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -724,6 +1355,24 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 30,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                }
+            ],
             slug: "kids_checkered_tee",
             type: 'shirts',
             tags: ['shirt'],
@@ -739,6 +1388,20 @@ export const initialData: SeedData = {
             inStock: 16,
             price: 25,
             sizes: ['XS','S'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                }
+            ],
             slug: "made_on_earth_by_humans_onesie",
             type: 'shirts',
             tags: ['shirt'],
@@ -754,6 +1417,20 @@ export const initialData: SeedData = {
             inStock: 0,
             price: 30,
             sizes: ['XS','S'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                }
+            ],
             slug: "scribble_t_logo_onesie",
             type: 'shirts',
             tags: ['shirt'],
@@ -769,6 +1446,24 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 30,
             sizes: ['XS','S'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                }
+            ],
             slug: "zero_emissions_(almost)_onesie",
             type: 'shirts',
             tags: ['shirt'],
@@ -784,6 +1479,24 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 65,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                }
+            ],
             slug: "kids_cyberquad_bomber_jacket",
             type: 'shirts',
             tags: ['shirt'],
@@ -799,6 +1512,24 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 30,
             sizes: ['XS','S','M'],
+            colors: [
+                {
+                    name: "Negro",
+                    code: "#1D1D1D"
+                },
+                {
+                    name: "Blanca",
+                    code: "#F7F7F7"
+                },
+                {
+                    name: "Gris",
+                    code: "#888888"
+                },
+                {
+                    name: "Roja",
+                    code: "#FD2525"
+                }
+            ],
             slug: "kids_corp_jacket",
             type: 'shirts',
             tags: ['shirt'],

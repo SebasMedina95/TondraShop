@@ -1,9 +1,9 @@
 "use client";
 
-import { QuantitySelector, SizeSelector } from "@/components";
-import { IProduct, ValidSizes } from "@/interfaces/product.interface";
+import { ColorSelector, QuantitySelector, SizeSelector } from "@/components";
+import { IProduct, ValidColors, ValidSizes } from "@/interfaces/product.interface";
 import React, { useState } from "react";
-import { IoCartOutline } from "react-icons/io5";
+import { IoAlertCircleOutline, IoCartOutline } from "react-icons/io5";
 
 interface IProps {
     product: IProduct
@@ -12,25 +12,41 @@ interface IProps {
 export const AddToCart = ({ product }: IProps) => {
 
   const [size, setSize] = useState<ValidSizes | undefined>(); //Una talla válida
+  const [color, setColor] = useState<ValidColors | undefined>(); //Una talla válida
   const [quantity, setQuantity] = useState<number>(1); //Minimamente 1 prenda
   const [errorSize, setErrorSize] = useState<boolean>(false); //Para manejar el error si no se selecciona talla
+  const [errorColor, setErrorColor] = useState<boolean>(false); //Para manejar el error si no se selecciona talla
 
   const addToCart = () => {
 
     setErrorSize(true);
     if( !size ) return;
-    console.log({ size, quantity })
+    setErrorColor(true);
+    if( !color ) return;
+
+    console.log({ size, quantity, color })
 
   }
 
   return (
     <>
-
+      {/* Por si no hemos seleccionado una talla */}
       {
         errorSize && !size && (
-            <span className="mt-2 font-bold shadow-sm text-red-500 fade-in">
-                Debe de seleccionar una talla
+            <span className="flex mt-2 px-4 py-2 text-md font-semibold leading-none text-white bg-red-500 rounded-full fade-in">
+                <IoAlertCircleOutline size={30} />
+                <p className="ml-1 mt-2">Debe de seleccionar una talla para realizar la orden.</p>
             </span>  
+        )
+      }
+
+      {/* Por si no hemos seleccionado un color */}
+      {
+        errorColor && !color && (
+          <span className="flex mt-2 px-4 py-2 text-md font-semibold leading-none text-white bg-red-500 rounded-full fade-in">
+              <IoAlertCircleOutline size={30} />
+              <p className="ml-1 mt-2">Debe de seleccionar un color para realizar la orden.</p>
+          </span> 
         )
       }
 
@@ -39,6 +55,13 @@ export const AddToCart = ({ product }: IProps) => {
         selectedSize={ size }
         availableSizes={product.sizes}
         onSizeSelected={ setSize }
+      />
+
+      {/* Selector de colores */}
+      <ColorSelector
+        selectedColor={ color }
+        availableColors={product.colors}
+        onColorSelected={ setColor }
       />
 
       {/* Selector de cantidad */}

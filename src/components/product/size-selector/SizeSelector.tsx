@@ -22,7 +22,7 @@ export const SizeSelector = ({ selectedSize, availableSizes, onSizeSelected }: I
                             clsx(
                                 "mx-1 hover:underline text-md md:text-xl rounded-md transition-all hover:bg-gray-200 p-2",
                                 {
-                                    "underline": size === selectedSize
+                                    "underline border-4 border-blue-500": size === selectedSize
                                 }
                             )
                         }

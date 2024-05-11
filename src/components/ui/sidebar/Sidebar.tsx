@@ -19,6 +19,8 @@ import { LiaBoxOpenSolid } from "react-icons/lia";
 import { MdOutlineChildCare } from "react-icons/md";
 
 export const Sidebar = () => {
+
+  //Aplicamos el gestor de estados - Zustand
   const isSideMenuOpen = useUiStore((state) => state.isSideMenuOpen);
   const closeMenu = useUiStore((state) => state.closeSideMenu);
 
@@ -39,9 +41,8 @@ export const Sidebar = () => {
 
       {/* El sidemenu */}
       <nav
-        //TODO: Efecto del Slide
         className={clsx(
-          "fixed p-5 right-0 top-0 w-[250px] md:w-[450px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
+          "fixed overflow-y-auto p-5 right-0 top-0 w-[250px] md:w-[450px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
           {
             "translate-x-full": !isSideMenuOpen,
           }
@@ -65,19 +66,19 @@ export const Sidebar = () => {
 
         {/* Opciones del Menú */}
 
-        <Link onClick={() => closeMenu()} className="flex items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all" href="/gender/men">
+        <Link onClick={() => closeMenu()} className="flex text-sm items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all" href="/gender/men">
             <IoManOutline size={30} />
             <span className="ml-3 text-xl">Ropa Hombres</span>
         </Link>
-        <Link onClick={() => closeMenu()} className="flex items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all" href="/gender/women">
+        <Link onClick={() => closeMenu()} className="flex text-sm items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all" href="/gender/women">
             <IoWomanOutline size={30} />
             <span className="ml-3 text-xl">Ropa Mujeres</span>
         </Link>
-        <Link onClick={() => closeMenu()} className="flex items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all" href="/gender/kid">
+        <Link onClick={() => closeMenu()} className="flex text-sm items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all" href="/gender/kid">
             <MdOutlineChildCare size={30} />
             <span className="ml-3 text-xl">Ropa Niños</span>
         </Link>
-        <Link onClick={() => closeMenu()} className="flex items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all" href="/gender/unisex">
+        <Link onClick={() => closeMenu()} className="flex text-sm items-center mt-5 p-2 hover:bg-gray-100 rounded transition-all" href="/gender/unisex">
             <LiaBoxOpenSolid size={30} />
             <span className="ml-3 text-xl">Ropa Mixtas</span>
         </Link>

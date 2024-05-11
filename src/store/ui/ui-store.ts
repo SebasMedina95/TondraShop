@@ -8,7 +8,7 @@ interface IState {
 
 export const useUiStore = create<IState>()((set) => ({
   
-    isSideMenuOpen: false,
+    isSideMenuOpen: false, //Por defecto en false
 
     openSideMenu: () => set({ isSideMenuOpen: true }),
     closeSideMenu: () => set({ isSideMenuOpen: false }),

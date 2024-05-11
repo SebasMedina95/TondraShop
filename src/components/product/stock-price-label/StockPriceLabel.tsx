@@ -68,7 +68,7 @@ export const StockPriceLabel = ({ slug }: IProps) => {
                     <div className="mt-2">
                         <div className="flex">
                             <h1 className={`${titleFont.className} antialiased font-bold text-sm md:text-xl flex`}>
-                                <FaBoxes className="mr-2 mt-1" />Stock:
+                                <FaBoxes className="mr-4 mt-1" />Stock:
                             </h1>
                             <p className="text-md md:text-xl items-center align-middle ml-1">
                                 { stock }
@@ -77,21 +77,21 @@ export const StockPriceLabel = ({ slug }: IProps) => {
 
                         <div className="flex">
                             <h1 className={ `${ titleFont.className } antialiased font-bold text-md md:text-xl flex` }> 
-                                <FaDollarSign className="mr-2 mt-1" /> Precio: 
+                                <FaDollarSign className="mr-4 mt-1" /> Precio: 
                             </h1>
                             <p className="text-md md:text-xl items-center align-middle ml-1">${ price }</p>
                         </div>
 
                         <div className="flex">
                             <h1 className={ `${ titleFont.className } antialiased font-bold text-md md:text-xl flex` }> 
-                                <GiClothes className="mr-2 mt-1" /> Tipo: 
+                                <GiClothes className="mr-4 mt-1" /> Tipo: 
                             </h1>
                             <p className="text-md md:text-xl items-center align-middle ml-1 capitalize">{ type }</p>
                         </div>
 
                         <div className="flex">
                             <h1 className={ `${ titleFont.className } antialiased font-bold text-md md:text-xl flex` }> 
-                                <TbGenderTransgender className="mr-2 mt-1" /> Genero: 
+                                <TbGenderTransgender className="mr-4 mt-1" /> Genero: 
                             </h1>
                             <p className="text-md md:text-xl items-center align-middle ml-1 capitalize">{ gender }</p>
                         </div>

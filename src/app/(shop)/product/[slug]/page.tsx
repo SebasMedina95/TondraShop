@@ -67,7 +67,7 @@ export default function ProductPage({ params }: IProps) {
       {/* Detalles del Producto */}
       <div className="mt-2 col-span-1 md:col-span-2 px-5">
 
-        <h1 className={ `${ titleFont.className } antialiased font-bold text-md md:text-xl` }> 
+        <h1 className={ `${ titleFont.className } text-blue-800 mb-2 antialiased font-bold text-md md:text-xl` }> 
           {product.title} 
         </h1>
 
@@ -77,6 +77,7 @@ export default function ProductPage({ params }: IProps) {
         <StockPriceLabel slug={ product.slug } />
 
         {/* Para agregar en el carrito / parte cliente */}
+        {/* Acá vamos a incluir independiente la talla, cantidad y color */}
         <AddToCart product={ product } />
 
         {/* Descripción del producto */}
@@ -85,6 +86,22 @@ export default function ProductPage({ params }: IProps) {
         </h3>
         <p className="mt-1 text-md md:text-xl font-light text-justify">
           { product.description }
+        </p>
+
+        <hr className="bg-gray-500" />
+
+        {/* Tags del producto */}
+        <h3 className="font-bold text-xl py-3">
+          Tags:
+        </h3>
+        <p className="mt-1 text-md md:text-xl font-light text-justify">
+          { 
+            product.tags.map( t => (
+              <button key={ t } className="mx-2 text-md md:text-xl rounded-md transition-all hover:bg-gray-300 p-1 capitalize">
+                { t }
+              </button>
+            )) 
+          }
         </p>
 
       </div>
