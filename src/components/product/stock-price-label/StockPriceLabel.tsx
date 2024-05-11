@@ -1,11 +1,16 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { titleFont } from "@/config/fonts";
 import { initialData } from "@/seed/seed";
-import { useEffect, useState } from "react";
-import { FaBoxes, FaDollarSign } from "react-icons/fa";
-import { GiClothes } from "react-icons/gi";
-import { TbGenderTransgender } from "react-icons/tb";
+// import { FaBoxes, FaDollarSign } from "react-icons/fa";
+// import { GiClothes } from "react-icons/gi";
+// import { TbGenderTransgender } from "react-icons/tb";
+
+import Inventory2Outlined from '@mui/icons-material/Inventory2Outlined';
+import PriceChangeOutlined from '@mui/icons-material/PriceChangeOutlined';
+import ChecklistOutlined from '@mui/icons-material/ChecklistOutlined';
+import FamilyRestroomOutlined from '@mui/icons-material/FamilyRestroomOutlined';
 
 //USAMOS ESTE COMPONENTE PORQUE CADA VEZ QUE QUEREMOS CARGARLO
 //QUEREMOS QUE SE ACTUALICE LA INFORMACIÓN DEL STOCK Y MANTENERLO
@@ -68,7 +73,8 @@ export const StockPriceLabel = ({ slug }: IProps) => {
                     <div className="mt-2">
                         <div className="flex">
                             <h1 className={`${titleFont.className} antialiased font-bold text-sm md:text-xl flex`}>
-                                <FaBoxes className="mr-4 mt-1" />Stock:
+                                <Inventory2Outlined className="mr-4" />
+                                Stock:
                             </h1>
                             <p className="text-md md:text-xl items-center align-middle ml-1">
                                 { stock }
@@ -77,21 +83,24 @@ export const StockPriceLabel = ({ slug }: IProps) => {
 
                         <div className="flex">
                             <h1 className={ `${ titleFont.className } antialiased font-bold text-md md:text-xl flex` }> 
-                                <FaDollarSign className="mr-4 mt-1" /> Precio: 
+                                <PriceChangeOutlined className="mr-4" /> 
+                                Precio: 
                             </h1>
                             <p className="text-md md:text-xl items-center align-middle ml-1">${ price }</p>
                         </div>
 
                         <div className="flex">
                             <h1 className={ `${ titleFont.className } antialiased font-bold text-md md:text-xl flex` }> 
-                                <GiClothes className="mr-4 mt-1" /> Tipo: 
+                                <ChecklistOutlined className="mr-4" /> 
+                                Tipo: 
                             </h1>
                             <p className="text-md md:text-xl items-center align-middle ml-1 capitalize">{ type }</p>
                         </div>
 
                         <div className="flex">
                             <h1 className={ `${ titleFont.className } antialiased font-bold text-md md:text-xl flex` }> 
-                                <TbGenderTransgender className="mr-4 mt-1" /> Genero: 
+                                <FamilyRestroomOutlined className="mr-4" /> 
+                                Genero: 
                             </h1>
                             <p className="text-md md:text-xl items-center align-middle ml-1 capitalize">{ gender }</p>
                         </div>

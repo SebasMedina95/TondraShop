@@ -1,9 +1,16 @@
 "use client";
 
-import { ColorSelector, QuantitySelector, SizeSelector } from "@/components";
-import { IProduct, ValidColors, ValidSizes } from "@/interfaces/product.interface";
 import React, { useState } from "react";
-import { IoAlertCircleOutline, IoCartOutline } from "react-icons/io5";
+import { ColorSelector,
+         QuantitySelector,
+         SizeSelector } from "@/components";
+import { IProduct,
+         ValidColors,
+         ValidSizes } from "@/interfaces/product.interface";
+
+import ErrorOutline from '@mui/icons-material/ErrorOutline';
+import ShoppingCart from '@mui/icons-material/ShoppingCart';
+        
 
 interface IProps {
     product: IProduct
@@ -14,6 +21,7 @@ export const AddToCart = ({ product }: IProps) => {
   const [size, setSize] = useState<ValidSizes | undefined>(); //Una talla válida
   const [color, setColor] = useState<ValidColors | undefined>(); //Una talla válida
   const [quantity, setQuantity] = useState<number>(1); //Minimamente 1 prenda
+
   const [errorSize, setErrorSize] = useState<boolean>(false); //Para manejar el error si no se selecciona talla
   const [errorColor, setErrorColor] = useState<boolean>(false); //Para manejar el error si no se selecciona talla
 
@@ -34,8 +42,8 @@ export const AddToCart = ({ product }: IProps) => {
       {
         errorSize && !size && (
             <span className="flex mt-2 px-4 py-2 text-md font-semibold leading-none text-white bg-red-500 rounded-full fade-in">
-                <IoAlertCircleOutline size={30} />
-                <p className="ml-1 mt-2">Debe de seleccionar una talla para realizar la orden.</p>
+                <ErrorOutline />
+                <p className="ml-1 mt-1">Debe de seleccionar una talla para realizar la orden.</p>
             </span>  
         )
       }
@@ -44,8 +52,8 @@ export const AddToCart = ({ product }: IProps) => {
       {
         errorColor && !color && (
           <span className="flex mt-2 px-4 py-2 text-md font-semibold leading-none text-white bg-red-500 rounded-full fade-in">
-              <IoAlertCircleOutline size={30} />
-              <p className="ml-1 mt-2">Debe de seleccionar un color para realizar la orden.</p>
+              <ErrorOutline />
+              <p className="ml-1 mt-1">Debe de seleccionar un color para realizar la orden.</p>
           </span> 
         )
       }
@@ -74,7 +82,7 @@ export const AddToCart = ({ product }: IProps) => {
       <button className="flex btn-primary my-5 w-full"
               onClick={ addToCart } >
         <span className="flex align-middle items-center text-center mx-auto">
-            <IoCartOutline className="mr-1" size={25} />
+            <ShoppingCart className="mr-1" />
             Agregar al carrito
         </span>
       </button>

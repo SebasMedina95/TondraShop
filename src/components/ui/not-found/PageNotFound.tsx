@@ -2,7 +2,8 @@ import { titleFont } from "@/config/fonts";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { IoIosReturnLeft } from "react-icons/io";
+// import { IoIosReturnLeft } from "react-icons/io";
+import KeyboardReturn from '@mui/icons-material/KeyboardReturn';
 
 export const PageNotFound = () => {
   return (
@@ -19,7 +20,7 @@ export const PageNotFound = () => {
             href="/"
           >
             <div className="flex items-center justify-center mr-2 m-2 p-2 rounded-md transition-all hover:bg-gray-200">
-              <IoIosReturnLeft className="mr-2" size={20} />
+              <KeyboardReturn className="mr-2" />
               Inicio Tondra Shop
             </div>
           </Link>

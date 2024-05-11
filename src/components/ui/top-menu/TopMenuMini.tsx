@@ -2,9 +2,13 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { IoManOutline, IoWomanOutline } from "react-icons/io5";
-import { LiaBoxOpenSolid } from "react-icons/lia";
-import { MdOutlineChildCare } from "react-icons/md";
+// import { IoManOutline, IoWomanOutline } from "react-icons/io5";
+// import { LiaBoxOpenSolid } from "react-icons/lia";
+// import { MdOutlineChildCare } from "react-icons/md";
+import Man2Outlined from '@mui/icons-material/Man2Outlined';
+import Woman2Outlined from '@mui/icons-material/Woman2Outlined';
+import ChildCareOutlined from '@mui/icons-material/ChildCareOutlined';
+import FamilyRestroomOutlined from '@mui/icons-material/FamilyRestroomOutlined';
 
 export const CategoryOptionsSlideshow = () => {
 
@@ -47,7 +51,7 @@ export const CategoryOptionsSlideshow = () => {
                   href="/gender/men"
               >
                   <div className="flex">
-                    <IoManOutline size={20} /> 
+                    <Man2Outlined/> 
                     <span className="ml-10">Hombres</span>
                   </div>
               </Link>
@@ -56,7 +60,7 @@ export const CategoryOptionsSlideshow = () => {
                   href="/gender/women"
               >
                   <div className="flex">
-                    <IoWomanOutline size={20} />
+                    <Woman2Outlined />
                     <span className="ml-10">Mujeres</span>
                   </div>
               </Link>
@@ -65,7 +69,7 @@ export const CategoryOptionsSlideshow = () => {
                   href="/gender/kid"
               >
                   <div className="flex">
-                    <MdOutlineChildCare size={20} />
+                    <ChildCareOutlined />
                     <span className="ml-10">Niños</span>
                   </div>
               </Link>
@@ -74,7 +78,7 @@ export const CategoryOptionsSlideshow = () => {
                   href="/gender/unisex"
               >
                   <div className="flex">
-                    <LiaBoxOpenSolid size={20} />
+                    <FamilyRestroomOutlined />
                     <span className="ml-10">Mixto</span>
                   </div>
               </Link>

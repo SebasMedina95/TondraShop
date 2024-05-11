@@ -3,10 +3,15 @@
 import { titleFont } from "@/config/fonts"
 import { useUiStore } from "@/store/ui/ui-store";
 import Link from "next/link"
-import { IoCartOutline, IoManOutline, IoSearchOutline, IoWomanOutline } from "react-icons/io5"
-import { LiaBoxOpenSolid } from "react-icons/lia";
-import { MdOutlineChildCare } from "react-icons/md";
-
+// import { IoCartOutline, IoManOutline, IoSearchOutline, IoWomanOutline } from "react-icons/io5"
+// import { LiaBoxOpenSolid } from "react-icons/lia";
+// import { MdOutlineChildCare } from "react-icons/md";
+import Man2Outlined from '@mui/icons-material/Man2Outlined';
+import Woman2Outlined from '@mui/icons-material/Woman2Outlined';
+import ChildCareOutlined from '@mui/icons-material/ChildCareOutlined';
+import FamilyRestroomOutlined from '@mui/icons-material/FamilyRestroomOutlined';
+import SearchOutlined from '@mui/icons-material/SearchOutlined';
+import ShoppingCart from '@mui/icons-material/ShoppingCart';
 
 export const TopMenu = () => {
 
@@ -29,19 +34,23 @@ export const TopMenu = () => {
         <div className="flex">
 
           <Link className="flex m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/men">
-            <IoManOutline className="mt-1" /> Hombres
+            <Man2Outlined className="mr-1" /> 
+            Hombres
           </Link>
 
           <Link className="flex m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/women">
-            <IoWomanOutline className="mt-1" />Mujeres
+            <Woman2Outlined className="mr-1" />
+            Mujeres
           </Link>
 
           <Link className="flex m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/kid">
-            <MdOutlineChildCare className="mt-1" />Niños
+            <ChildCareOutlined className="mr-1" />
+            Niños
           </Link>
 
           <Link className="flex m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/gender/unisex">
-            <LiaBoxOpenSolid className="mt-1" />Mixto
+            <FamilyRestroomOutlined className="mr-1" />
+            Mixto
           </Link>
 
         </div>
@@ -52,7 +61,7 @@ export const TopMenu = () => {
       <div className="flex items-center">
 
         <Link className="mx-2 hover:bg-gray-100 rounded-md transition-all" href="/search">
-          <IoSearchOutline className="w-5 h-5" />
+          <SearchOutlined className="text-2xl" />
         </Link>
         
         <Link className="mx-2 hover:bg-gray-100 rounded-md transition-all" href="/cart">
@@ -61,7 +70,7 @@ export const TopMenu = () => {
                   title="Productos en el carrito">
               6
             </span>
-            <IoCartOutline size={20} />
+            <ShoppingCart />
           </div>
         </Link>
 
